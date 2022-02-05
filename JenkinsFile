@@ -1,0 +1,9 @@
+node{
+    stage('SCM Checkout')
+    {
+      git 'https://github.com/Saujanya99/DealsDateRepo.git'
+    }
+    stage('Build-Docker Image'){
+      bat 'docker-compose up --build -d'    
+    }
+    }
